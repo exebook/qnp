@@ -1,0 +1,23 @@
+#!/usr/bin/env yy
+net ∆ ≣ ('net')
+fs ∆ ≣ ('fs')
+
+DIR ∆ process.env.HOME + '/.qnp/'
+n = 'zip.json'
+A ∆ fs.readFileSync(DIR+'/' + n) ≂ ⌶('\n')
+
+server ∆ net.createServer(➮ (S) {
+	S.on('data', ➮ {
+		s ∆ a ≂ 
+		⌥ (s ≟ '__EXIT__') process.exit()
+		R ∆[]
+		i ⬌ A {
+			⌥ (Aⁱ≀(s) >= 0) R ⬊ (Aⁱ)
+		}
+		ロ R ⫴('\n')
+		S.end(R ⫴('\n'))
+	})
+})
+
+server.listen(7000, 'localhost')
+

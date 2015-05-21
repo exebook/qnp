@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+DIR = process.env.HOME + '/.qnp/'
+fs = require('fs')
+require('elfu')
+require('./client')
+require('./update')
+require('./search')

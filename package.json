@@ -1,0 +1,21 @@
+{
+  "name": "qnp",
+  "version": "0.0.1",
+  "description": "Query NPM locally fast, <200 ms, cute and convenient",
+  "dependencies": {
+    "elfu": "0.0.x"
+  },
+  "scripts" : {
+  	"install": "echo type 'qnp' to see help"
+  },
+  "bin": {
+    "qnp": "./qnp"
+  },
+  "keywords": [
+    "npm",
+    "search",
+    "fast"
+  ],
+  "author": "exebook",
+  "license": "Unlicense"
+}
